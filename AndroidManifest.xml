@@ -1,0 +1,33 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pitecan.DialEasyWidget"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="18" android:targetSdkVersion="18" />
+
+    <application
+        android:icon="@drawable/toshiyuki"
+        android:label="@string/app_name" >
+        <receiver
+            android:name="DialEasyWidget"
+            android:exported="false"
+            android:label="DialEasyWidget" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/dialeasy_info" />
+        </receiver>
+
+        <service
+            android:name="DialEasyWidgetService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.pitecan.DialEasyWidget.ACTION_BTNCLICK" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
