@@ -1,4 +1,5 @@
 # AndroidのWidgetのテスト
 
 http://www.saturn.dti.ne.jp/npaka/android/AppWidgetEx/index.html
-をコンパイルできるようにしたもの
+をもとに「らくらくフォン」を作ろうとしているところ
+
