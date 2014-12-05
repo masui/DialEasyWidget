@@ -1,4 +1,4 @@
-package com.pitecan.DialEasyWidget;
+package com.pitecan.dialeasy;
 import java.util.Random;
 
 import android.app.PendingIntent;
@@ -10,9 +10,9 @@ import android.os.IBinder;
 import android.widget.RemoteViews;
      
 //ホームウィジェットを制御するサービス
-public class DialEasyWidgetService extends Service {
-    private static final String ACTION_BTNCLICK =
-        "net.npaka.appwidget.ACTION_BTNCLICK";
+public class DialEasyService extends Service {
+    private static final String ACTION_CALL =
+        "com.pitecan.dialeasy.ACTION_CALL";
     
     //サービス開始時に呼ばれる
     @Override
@@ -24,20 +24,20 @@ public class DialEasyWidgetService extends Service {
 
         //ペンディングインテントの設定
         Intent newintent=new Intent();
-        newintent.setAction(ACTION_BTNCLICK);
+        newintent.setAction(ACTION_CALL);
         PendingIntent pending=PendingIntent.getService(this,0,newintent,0);
         //view.setOnClickPendingIntent(R.id.button1,pending);
         
         //振るボタンがクリックされた時の処理
-        if (ACTION_BTNCLICK.equals(intent.getAction())) {
+        if (ACTION_CALL.equals(intent.getAction())) {
             btnClicked(view);
         }
         
         //ホームスクリーンウィジェットの画面更新
         AppWidgetManager manager=AppWidgetManager.getInstance(this);
         ComponentName widget=new ComponentName(
-            "net.npaka.appwidgetex",
-            "net.npaka.appwidgetex.AppWidgetEx");
+            "com.pitecan.dialeasy",
+            "com.pitecan.dialeasy.DialEasy");
         manager.updateAppWidget(widget,view);
         return START_STICKY;
     }
