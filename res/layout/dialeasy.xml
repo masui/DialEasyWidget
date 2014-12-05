@@ -9,7 +9,5 @@
         android:id="@+id/imagebutton"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/toshiyuki"
-        android:textSize="12sp"
-        android:src="@drawable/phone"/>
+        android:src="@drawable/toshiyuki"/>
 </LinearLayout>
