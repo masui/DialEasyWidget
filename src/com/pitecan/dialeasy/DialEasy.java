@@ -1,4 +1,4 @@
-package com.pitecan.DialEasy;
+package com.pitecan.dialeasy;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
