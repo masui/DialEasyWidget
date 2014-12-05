@@ -5,9 +5,11 @@
     android:layout_height="wrap_content"
     android:background="#33000000"
     android:orientation="vertical">
-    <ImageView 
-        android:id="@+id/imageview1"
+    <ImageButton
+        android:id="@+id/imagebutton"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:text="@string/toshiyuki"
+        android:textSize="12sp"
         android:src="@drawable/phone"/>
 </LinearLayout>

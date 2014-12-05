@@ -8,6 +8,8 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.os.IBinder;
 import android.widget.RemoteViews;
+
+import android.util.Log;
      
 //ホームウィジェットを制御するサービス
 public class DialEasyService extends Service {
@@ -19,6 +21,8 @@ public class DialEasyService extends Service {
     public int onStartCommand(Intent intent,int flags,int startId) {
         super.onStartCommand(intent,flags,startId);
         
+	Log.v("DialEasy", "OnStart");
+
         //リモートビューの生成
         RemoteViews view=new RemoteViews(getPackageName(),R.layout.dialeasy);
 
@@ -26,7 +30,9 @@ public class DialEasyService extends Service {
         Intent newintent=new Intent();
         newintent.setAction(ACTION_CALL);
         PendingIntent pending=PendingIntent.getService(this,0,newintent,0);
-        //view.setOnClickPendingIntent(R.id.button1,pending);
+        view.setOnClickPendingIntent(R.id.imagebutton,pending);
+
+	Log.v("DialEasy", "SetIntent");
         
         //振るボタンがクリックされた時の処理
         if (ACTION_CALL.equals(intent.getAction())) {
@@ -50,6 +56,7 @@ public class DialEasyService extends Service {
      
     //振るボタンがクリックされた時の処理
     public void btnClicked(RemoteViews view){
+	Log.v("DialEasy", "Button Clicked");
     }
     
     //乱数の取得
