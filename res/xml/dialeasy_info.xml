@@ -4,7 +4,7 @@
     android:minHeight="40dp"
     android:minWidth="40dp"
     android:updatePeriodMillis="0"
-    android:previewImage="@drawable/preview"
+    android:previewImage="@drawable/masui"
     android:initialLayout="@layout/dialeasy"
-    android:resizeMode="horizontal|vertical">
+    android:resizeMode="none">
 </appwidget-provider>
