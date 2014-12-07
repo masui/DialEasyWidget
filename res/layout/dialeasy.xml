@@ -9,7 +9,7 @@
         android:id="@+id/imagebutton"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:padding="0px"
+        android:padding="3px"
         android:src="@drawable/masui"
-        android:scaleType="fitXY"/>
+        android:scaleType="fitCenter"/>
 </LinearLayout>
