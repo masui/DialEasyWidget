@@ -1,4 +1,4 @@
-package com.pitecan.dialeasy;
+package com.pitecan.dialeasy_##name##;
 
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
@@ -12,7 +12,7 @@ import android.net.Uri;
 import android.util.Log;
 
 //ホームスクリーンウィジェットを提供するブロードキャストレシーバー
-public class DialEasy extends AppWidgetProvider {
+public class DialEasy_##name## extends AppWidgetProvider {
     //ホームスクリーンウィジェット更新時に呼ばれる
     @Override
     public void onUpdate(Context context,
@@ -22,7 +22,7 @@ public class DialEasy extends AppWidgetProvider {
         RemoteViews view=new RemoteViews(context.getPackageName(),R.layout.dialeasy);
 
 	Intent intent = new Intent(Intent.ACTION_CALL);
-	intent.setData(Uri.parse("tel:"+"0467235838")); 
+	intent.setData(Uri.parse("tel:##number##")); 
 	PendingIntent pending = PendingIntent.getActivity(context, 0, intent, 0);
 	view.setOnClickPendingIntent(R.id.imagebutton, pending);
 

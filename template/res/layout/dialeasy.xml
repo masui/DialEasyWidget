@@ -10,6 +10,6 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:padding="3px"
-        android:src="@drawable/hankyu"
+        android:src="@drawable/##name##"
         android:scaleType="fitCenter"/>
 </LinearLayout>

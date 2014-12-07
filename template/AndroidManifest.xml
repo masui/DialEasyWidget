@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.pitecan.dialeasy_hankyu"
+    package="com.pitecan.dialeasy_##name##"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -9,12 +9,12 @@
     <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="19" />
 
     <application
-        android:icon="@drawable/hankyu"
+        android:icon="@drawable/##name##"
         android:label="@string/app_name" >
         <receiver
-            android:name="DialEasy_hankyu"
+            android:name="DialEasy_##name##"
             android:exported="false"
-            android:label="DialEasy_hankyu" >
+            android:label="DialEasy_##name##" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
