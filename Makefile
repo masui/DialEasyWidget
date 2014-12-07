@@ -5,12 +5,14 @@ install:
 clean:
 	/bin/rm -r -f bin gen
 	/bin/rm -r -f *~
+	/bin/rm -r -f hankyu.apk
 	/bin/rm -r -f */*~
 	/bin/rm -r -f */*/*~
 	/bin/rm -r -f */*/*/*~
 	/bin/rm -r -f */*/*/*/*~
 	/bin/rm -r -f */*/*/*/*/*~
 
-# % dialeasy name phone#
-# % dialeasy toshiyuki 08023881513 # toshiyuki.apk ができる
+test:
+	ruby make.rb hankyu 079866271
+
 
