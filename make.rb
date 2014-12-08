@@ -1,3 +1,7 @@
+#
+# らくらくホンWidgetを生成する
+# 2014/12/08 09:52:43 masui@pitecan.com
+#
 name = ARGV.shift
 number = ARGV.shift
 if !name || !number then
@@ -10,7 +14,7 @@ if !File.exist?("#{name}.png") then
   exit
 end
 
-DIR = "/Users/masui/DialEasyWidget"
+DIR = File.expand_path("~/DialEasyWidget")
 
 system "cd #{DIR}; make clean"
 system "/bin/rm -f #{DIR}/res/drawable-hdpi/*"
