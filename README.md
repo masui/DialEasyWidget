@@ -8,4 +8,6 @@
 
 ![](hankyu.png)
 
+* ``DialEasyWidget/`` はホームに置く
+* ``make.rb`` はどこに置いてもいい
 
